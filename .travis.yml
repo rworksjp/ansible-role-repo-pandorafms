@@ -10,7 +10,7 @@ before_install:
   - echo '[all]' > hosts
   - |
     for i in 7 6 ; do
-      docker run --name centos$i -di centos:$i /sbin/init
+      docker run --name centos$i -di centos:$i /bin/bash
       echo centos$i >> hosts
     done
 
@@ -23,7 +23,7 @@ install:
   - ansible-lint --version
 
 script:
-  - ansible-playbook -i localhost, --syntax-check tests/test.yml
+  - ansible-playbook -i dummy --syntax-check tests/test.yml
   - ansible-lint tests/test.yml
   - ansible-playbook -i hosts tests/test.yml
 

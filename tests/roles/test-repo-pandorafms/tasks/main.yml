@@ -1,4 +1,7 @@
 ---
+
+- debug: var=repo_pandorafms_enabled
+
 - name: Check repo file
   file:
     path: /etc/yum.repos.d/artica_pandorafms.repo
@@ -10,7 +13,6 @@
     section: artica_pandorafms
     option: baseurl
     value: '{{ repo_pandorafms_repo_url }}'
-    no_extra_spaces: yes
   register: result
 
 - name: Assert check result
@@ -23,8 +25,7 @@
     dest: /etc/yum.repos.d/artica_pandorafms.repo
     section: artica_pandorafms
     option: enabled
-    value: '{% 1 if repo_pandorafms_repo_url else 0 %}'
-    no_extra_spaces: yes
+    value: '{% if repo_pandorafms_enabled|bool %}1{% else %}0{% endif %}'
   register: result
 
 - name: Assert check results
