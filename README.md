@@ -1,6 +1,9 @@
 repo-pandorafms
 =========
 
+[![Travis](https://travis-ci.org/rworksjp/ansible-role-repo-pandorafms.svg?branch=master)](https://travis-ci.org/rworksjp/ansible-role-repo-pandorafms)
+[![Ansible Role](https://img.shields.io/ansible/role/14693.svg)](https://galaxy.ansible.com/rworksjp/repo-pandorafms/)
+
 Ansible role to add [Pandora FMS](https://pandorafms.org/) official repository.
 
 Requirements
