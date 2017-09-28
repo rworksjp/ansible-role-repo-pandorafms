@@ -1,0 +1,14 @@
+galaxy_info:
+  author: KIKUCHI Koichiro
+  description: ansible role to add Pandora FMS official repository
+  company: Rworks, Inc.
+  license: BSD
+  min_ansible_version: 2.1
+  platforms:
+    - name: EL
+      versions:
+      - 6
+      - 7
+  galaxy_tags:
+    - packaging
+dependencies: []

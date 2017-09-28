@@ -1,0 +1,9 @@
+---
+# tasks file for rworks.repo-pandorafms
+- name: Add Pandora FMS official repository
+  yum_repository:
+    name: artica_pandorafms
+    description: 'Pandora FMS official repository for RHEL/CentOS {{ansible_distribution_major_version}}'
+    baseurl: '{{ repo_pandorafms_repo_url }}'
+    gpgcheck: no
+    enabled: '{{ repo_pandorafms_enabled }}'

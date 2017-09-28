@@ -1,0 +1,3 @@
+---
+- include: run-test.yml
+- include: run-test.yml repo_pandorafms_enabled='no'

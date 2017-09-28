@@ -1,0 +1,3 @@
+---
+# vars file for rworks.repo-pandorafms
+repo_pandorafms_repo_url: 'http://firefly.artica.es/centos$releasever'
